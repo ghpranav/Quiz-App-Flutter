@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/controllers/question_controller.dart';
+import 'package:autism_world/constants.dart';
+import 'package:autism_world/controllers/question_controller.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'progress_bar.dart';
-import 'question_card.dart';
+import 'package:autism_world/screens/quiz/components/progress_bar.dart';
+import 'package:autism_world/screens/quiz/components/question_card.dart';
 
 class Body extends StatelessWidget {
   const Body({

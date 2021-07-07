@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/controllers/question_controller.dart';
-import 'package:quiz_app/models/Questions.dart';
-
-import '../../../constants.dart';
-import 'option.dart';
+import 'package:autism_world/constants.dart';
+import 'package:autism_world/controllers/question_controller.dart';
+import 'package:autism_world/models/Questions.dart';
+import 'package:autism_world/screens/quiz/components/option.dart';
 
 class QuestionCard extends StatelessWidget {
   const QuestionCard({

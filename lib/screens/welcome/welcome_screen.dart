@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import 'package:autism_world/constants.dart';
+import 'package:autism_world/screens/quiz/quiz_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -26,25 +26,25 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(flex: 2), //2/6
+                  const Spacer(flex: 2), //2/6
                   Text(
-                    "Let's Play Quiz,",
+                    kAppName + ",",
                     style: Theme.of(context).textTheme.headline4.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  Text("Enter your informations below"),
-                  Spacer(), // 1/6
+                  const Text("Enter your informations below"),
+                  const Spacer(), // 1/6
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFF1C2341),
+                      fillColor: const Color(0xFF1C2341),
                       hintText: "Full Name",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                     ),
                   ),
-                  Spacer(), // 1/6
+                  const Spacer(), // 1/6
                   InkWell(
                     onTap: () => Get.to(QuizScreen()),
                     child: Container(
@@ -56,7 +56,7 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Lets Start Quiz",
+                        "Lets Start!",
                         style: Theme.of(context)
                             .textTheme
                             .button
@@ -64,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(flex: 2), // it will take 2/6 spaces
+                  const Spacer(flex: 2), // it will take 2/6 spaces
                 ],
               ),
             ),

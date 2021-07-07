@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/controllers/question_controller.dart';
-
-import 'components/body.dart';
+import 'package:autism_world/controllers/question_controller.dart';
+import 'package:autism_world/screens/quiz/components/body.dart';
 
 class QuizScreen extends StatelessWidget {
   @override
