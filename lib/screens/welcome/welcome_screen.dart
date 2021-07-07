@@ -9,8 +9,17 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        fit: StackFit.expand,
         children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+          SvgPicture.asset(
+            "assets/icons/bg.svg",
+            fit: BoxFit.cover,
+            placeholderBuilder: (BuildContext context) => Container(
+              height: context.height,
+              width: context.width,
+              color: const Color(0xFF252C4A),
+            ),
+          ),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
