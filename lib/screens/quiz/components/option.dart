@@ -5,14 +5,14 @@ import 'package:autism_world/controllers/question_controller.dart';
 
 class Option extends StatelessWidget {
   const Option({
-    Key key,
+    Key? key,
     this.text,
     this.index,
     this.press,
   }) : super(key: key);
-  final String text;
-  final int index;
-  final VoidCallback press;
+  final String? text;
+  final int? index;
+  final VoidCallback? press;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class Option extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "${index + 1}. $text",
+                    "${index! + 1}. $text",
                     style: TextStyle(color: getTheRightColor(), fontSize: 16),
                   ),
                   Container(

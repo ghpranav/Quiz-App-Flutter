@@ -29,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
                   const Spacer(flex: 2), //2/6
                   Text(
                     kAppName + ",",
-                    style: Theme.of(context).textTheme.headline4.copyWith(
+                    style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   const Text("Enter your informations below"),
@@ -59,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                         "Lets Start!",
                         style: Theme.of(context)
                             .textTheme
-                            .button
+                            .button!
                             .copyWith(color: Colors.black),
                       ),
                     ),

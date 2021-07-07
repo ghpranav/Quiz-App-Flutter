@@ -10,13 +10,13 @@ class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 
-  AnimationController _animationController;
-  Animation _animation;
+  late AnimationController _animationController;
+  Animation? _animation;
   // so that we can access our animation outside
-  Animation get animation => this._animation;
+  Animation? get animation => this._animation;
 
-  PageController _pageController;
-  PageController get pageController => this._pageController;
+  PageController? _pageController;
+  PageController? get pageController => this._pageController;
 
   List<Question> _questions = sample_data
       .map(
@@ -32,11 +32,11 @@ class QuestionController extends GetxController
   bool _isAnswered = false;
   bool get isAnswered => this._isAnswered;
 
-  int _correctAns;
-  int get correctAns => this._correctAns;
+  int? _correctAns;
+  int? get correctAns => this._correctAns;
 
-  int _selectedAns;
-  int get selectedAns => this._selectedAns;
+  int? _selectedAns;
+  int? get selectedAns => this._selectedAns;
 
   // for more about obs please check documentation
   RxInt _questionNumber = 1.obs;
@@ -70,7 +70,7 @@ class QuestionController extends GetxController
   void onClose() {
     super.onClose();
     _animationController.dispose();
-    _pageController.dispose();
+    _pageController!.dispose();
   }
 
   void checkAns(Question question, int selectedIndex) {
@@ -94,7 +94,7 @@ class QuestionController extends GetxController
   void nextQuestion() {
     if (_questionNumber.value != _questions.length) {
       _isAnswered = false;
-      _pageController.nextPage(
+      _pageController!.nextPage(
           duration: Duration(milliseconds: 250), curve: Curves.ease);
 
       // Reset the counter
