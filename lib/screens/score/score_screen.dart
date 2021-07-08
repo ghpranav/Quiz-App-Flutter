@@ -9,6 +9,8 @@ class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionController _qnController = Get.put(QuestionController());
+    double meterValue = _qnController.numOfCorrectAns/_qnController.questions.length;
+    String displayValue = meterValue.toStringAsFixed(2);
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -26,7 +28,7 @@ class ScoreScreen extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "${_qnController.numOfCorrectAns * 10}/${_qnController.questions.length * 10}",
+                "${displayValue}",
                 style: Theme.of(context)
                     .textTheme
                     .headline4!
@@ -34,7 +36,7 @@ class ScoreScreen extends StatelessWidget {
               ),
               Spacer(flex:1),
                LinearProgressIndicator(
-                 value:0.5,
+                 value:meterValue,
                ),
               Spacer(flex:1),
               Text(
